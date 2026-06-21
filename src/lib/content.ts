@@ -60,13 +60,13 @@ export const credibilityContent = {
     },
     {
       icon: "🏠",
-      title: "Tài sản thực tế",
-      desc: "Nhà cấp 4 kiên cố + 5 phòng trọ xây dựng đúng phép, đang cho thuê full.",
+      title: "Dãy trọ full nội thất",
+      desc: "5 phòng trọ đang cho thuê full, mỗi phòng có giường, khu vệ sinh riêng. Người mua chỉ vào và cho thuê tiếp với khách.",
     },
     {
       icon: "📊",
       title: "Dòng tiền minh bạch",
-      desc: "Thu nhập 12tr/tháng có hợp đồng thuê rõ ràng. Kiểm tra được dòng tiền thực tế.",
+      desc: "Thu nhập 12tr/tháng từ 5 phòng trọ đang cho thuê full. Phòng có giường, khu vệ sinh riêng — người mua chỉ vào và tiếp tục cho thuê với khách.",
     },
     {
       icon: "🤝",
@@ -89,7 +89,7 @@ export const storyContent = {
   after: {
     label: "Sau khi sở hữu lô đất này",
     points: [
-      "Nhận ngay 12 triệu/tháng từ 5 phòng trọ đang cho thuê",
+      "Thu nhập 12tr/tháng từ dãy trọ — khách đang thuê ổn định, vào là có thu nhập ngay",
       "Tài sản hữu hình, giá trị luôn tăng theo thời gian",
       "Chỉ 3-5 phút ra trung tâm Huế, vị trí vàng",
       "Đất luôn tăng giá theo thời gian",
@@ -200,7 +200,7 @@ export const audienceTabsContent = {
         "5 phòng trọ đang cho thuê full - 12 triệu/tháng",
         "Vị trí gần ĐH, BV - nhu cầu thuê luôn cao",
         "Sổ hồng chính chủ - Pháp lý sạch, sang tên ngay",
-        "Tiềm năng mở rộng thêm phòng trọ (sân vườn rộng)",
+        "Phòng có sẵn giường, khu vệ sinh — vào là cho thuê được ngay, không tốn thêm chi phí sửa sang",
         "Đất luôn tăng giá theo quy hoạch đô thị Huế",
       ],
       cta: "Tính lợi nhuận đầu tư",
@@ -247,7 +247,7 @@ export const faqContent = {
     },
     {
       q: "Thu nhập cho thuê có ổn định không?",
-      a: "5 phòng đang cho thuê full, khách ở lâu dài (sinh viên, nhân viên văn phòng, công nhân). Nhu cầu thuê trọ tại đây rất cao do gần ĐH Huế, ĐH Y Dược, BV Trung ương.",
+      a: "5 phòng đang cho thuê full, mỗi phòng có sẵn giường, khu vệ sinh riêng. Người mua chỉ vào là cho thuê tiếp được ngay, không cần sửa sang gì thêm. Khách thuê hiện tại ở lâu dài (sinh viên, nhân viên văn phòng).",
     },
     {
       q: "Có thể mở rộng thêm phòng trọ không?",
@@ -270,14 +270,14 @@ export const leadFormContent = {
 export const rentalHighlight = {
   badge: "CHO THUÊ FULL — 12 TRIỆU/THÁNG",
   headline: "5/5 phòng trọ đang cho thuê full — không còn phòng trống",
-  description: "Dòng tiền 12 triệu/tháng đều đặn, có hợp đồng cho thuê rõ ràng. Khách thuê ổn định (sinh viên, nhân viên văn phòng, công nhân gần KCN).",
+  description: "5 phòng trọ đang cho thuê full — 12 triệu/tháng. Mỗi phòng có sẵn giường, khu vệ sinh riêng. Người mua chỉ cần vào và tiếp tục cho thuê với khách, không cần sửa sang gì thêm.",
   revenueItems: [
     { label: "Tổng thu/tháng", value: "12.000.000 ₫" },
     { label: "Tổng thu/năm", value: "144.000.000 ₫" },
     { label: "Giá thuê/phòng", value: "2.4tr — 2.6tr/tháng" },
     { label: "Công suất thuê", value: "100% (full phòng)" },
   ],
-  cta: "Xem hợp đồng thuê thực tế",
+  cta: "Gọi ngay — xem dãy trọ thực tế",
 }
 
 export const scarcityContent = {
