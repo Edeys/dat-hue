@@ -261,9 +261,8 @@ export const faqContent = {
 }
 
 export const leadFormContent = {
-  headline: "Đăng Ký Nhận Thông Tin Chi Tiết",
-  subheadline: "Tặng File PDF Phân Tích Vị Trí & Video Tour 4K khi đăng ký hôm nay",
-  incentive: "🎁 Quà tặng đặc biệt: PDF phân tích thị trường + Video thực tế 4K gửi qua Zalo/Email ngay sau khi đăng ký",
+  headline: "Để Lại Số Điện Thoại — Tôi Sẽ Tư Vấn Ngay",
+  subheadline: "Gọi lại cho anh/chị trong vòng 30 phút, giải đáp mọi thắc mắc về lô đất",
   cta: "Gửi Thông Tin",
   phoneCta: "Gọi Ngay: 034.857.9065",
 }

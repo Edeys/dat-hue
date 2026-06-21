@@ -41,15 +41,14 @@ export default function LeadForm() {
         <h2 ref={headlineRef} className="text-3xl md:text-4xl font-bold text-white text-center mb-4 opacity-0">
           {leadFormContent.headline}
         </h2>
-        <p className="text-zinc-400 text-center mb-2">{leadFormContent.subheadline}</p>
-        <p className="text-amber-400 text-center text-sm mb-10">{leadFormContent.incentive}</p>
+        <p className="text-zinc-400 text-center mb-10">{leadFormContent.subheadline}</p>
 
         <div ref={formRef} className="bg-zinc-900 rounded-2xl p-6 md:p-8 opacity-0">
           {submitted ? (
             <div className="text-center py-8">
               <div className="text-5xl mb-4">🎉</div>
               <h3 className="text-2xl font-bold text-white mb-3">Đăng ký thành công!</h3>
-              <p className="text-zinc-300 mb-6">Chúng tôi sẽ gửi PDF phân tích vị trí và Video tour 4K qua Zalo/Email trong ít phút.</p>
+              <p className="text-zinc-300 mb-6">Tôi sẽ gọi lại cho anh/chị trong 30 phút để tư vấn chi tiết.</p>
               <p className="text-zinc-400">Hoặc gọi ngay: <a href={`tel:${siteConfig.phoneRaw}`} className="text-amber-400 font-bold hover:underline">{siteConfig.phone}</a></p>
             </div>
           ) : (
