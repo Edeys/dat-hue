@@ -1,4 +1,13 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Đất Điện Biên Phủ - Trường An, Huế
+
+Landing page bán lô đất **279m²** tại 2/13/293 Đường Điện Biên Phủ, P. Trường An, TP Huế.
+
+- **Giá:** 5.5 tỷ VND
+- **Dòng tiền:** 5 phòng trọ đang cho thuê full — 12 triệu/tháng
+- **Công nghệ:** Next.js 16 + Tailwind v4 + GSAP 3.15
+
+🌐 **Website:** https://edeys.github.io/dat-hue/
+
 
 ## Getting Started
 
