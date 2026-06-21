@@ -65,8 +65,8 @@ export const credibilityContent = {
     },
     {
       icon: "📊",
-      title: "Dòng tiền minh bạch",
-      desc: "Thu nhập 12tr/tháng từ 5 phòng trọ đang cho thuê full. Phòng có giường, khu vệ sinh riêng — người mua chỉ vào và tiếp tục cho thuê với khách.",
+      title: "Tiềm năng mở rộng",
+      desc: "Có thể cải tạo nhà cấp 4 thêm 3 phòng trọ — từ 5 lên 8 phòng, thu nhập tiềm năng ~19-20tr/tháng.",
     },
     {
       icon: "🤝",
@@ -91,8 +91,8 @@ export const storyContent = {
     points: [
       "Thu nhập 12tr/tháng từ dãy trọ — khách đang thuê ổn định, vào là có thu nhập ngay",
       "Tài sản hữu hình, giá trị luôn tăng theo thời gian",
+      "Có thể cải tạo nhà cấp 4 thêm 3 phòng trọ → tổng 8 phòng, thu ~19-20tr/tháng",
       "Chỉ 3-5 phút ra trung tâm Huế, vị trí vàng",
-      "Đất luôn tăng giá theo thời gian",
     ],
   },
 }
@@ -280,8 +280,40 @@ export const rentalHighlight = {
   cta: "Gọi ngay — xem dãy trọ thực tế",
 }
 
-export const scarcityContent = {
-  badge: "CHỈ CÒN 1 LÔ DUY NHẤT",
-  message: "Lô đất duy nhất tại hẻm này đang bán. Không có sản phẩm thứ 2.",
-  urgency: "Giá có thể điều chỉnh tăng theo thị trường. Liên hệ ngay hôm nay để chốt giá tốt nhất.",
+export const investmentComparison = {
+  badge: "SO SÁNH ĐẦU TƯ",
+  headline: "Gửi ngân hàng hay mua chung cư trả góp — hay đầu tư dãy trọ này?",
+  items: [
+    {
+      label: "Gửi ngân hàng",
+      rate: "~4.5%/năm",
+      monthly: "~20.6 triệu/tháng",
+      note: "Tiền mất giá theo lạm phát, không có tài sản",
+      color: "red",
+    },
+    {
+      label: "Mua chung cư trả góp",
+      rate: "Mất lãi vay + khấu hao",
+      monthly: "Âm tiền mỗi tháng",
+      note: "Căn hộ xuống cấp theo thời gian, không tạo dòng tiền",
+      color: "red",
+    },
+    {
+      label: "Mua dãy trọ này",
+      rate: "Dòng tiền 12tr/tháng",
+      monthly: "+ 144 triệu/năm",
+      note: "Có đất + nhà + dãy trọ, tài sản tăng giá, vào là có thu nhập ngay",
+      color: "emerald",
+    },
+  ],
+  conclusion: "Đầu tư dãy trọ: vừa giữ tiền, vừa có dòng tiền hàng tháng ổn định. Phòng trọ có sẵn giường, vệ sinh — người mua chỉ vào và cho thuê tiếp.",
+}
+
+export const expansionContent = {
+  currentRooms: 5,
+  maxRooms: 8,
+  extraRooms: 3,
+  source: "nhà cấp 4 phía trước",
+  detail: "Hiện tại dãy trọ đã có 5 phòng cho thuê full. Phần nhà cấp 4 phía trước có thể cải tạo thêm 3 phòng trọ nữa, nâng tổng lên 8 phòng — thu nhập tiềm năng ~19-20 triệu/tháng.",
+  cta: "Xem mặt bằng chi tiết",
 }
