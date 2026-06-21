@@ -82,7 +82,7 @@ export default function Trust() {
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <div className="bg-zinc-800/50 rounded-xl overflow-hidden border border-zinc-700/30">
             <img
-              src="/images/phong-tro-noi-that.jpg"
+              src="images/phong-tro-noi-that.jpg"
               alt="Sổ đỏ - Sơ đồ thửa đất"
               className="w-full h-auto object-contain"
               loading="lazy"
@@ -93,7 +93,7 @@ export default function Trust() {
           </div>
           <div className="bg-zinc-800/50 rounded-xl overflow-hidden border border-zinc-700/30">
             <img
-              src="/images/anhh12.jpg"
+              src="images/anhh12.jpg"
               alt="Sổ đỏ chi tiết - Tiếp giáp Đ. Điện Biên Phủ"
               className="w-full h-auto object-contain"
               loading="lazy"

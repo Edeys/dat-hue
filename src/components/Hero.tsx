@@ -30,7 +30,7 @@ export default function Hero() {
     >
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url(/images/san-ngay.jpg)" }}
+        style={{ backgroundImage: "url(images/san-ngay.jpg)" }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
       </div>

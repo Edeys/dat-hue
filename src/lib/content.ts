@@ -101,47 +101,47 @@ export const galleryContent = {
   headline: "Hình ảnh thực tế lô đất",
   images: [
     {
-      url: "/images/day-tro-mat-truoc.jpg",
+      url: "images/day-tro-mat-truoc.jpg",
       alt: "Dãy 5 phòng trọ mặt trước - Đang cho thuê full",
       caption: "Dãy 5 phòng trọ đang cho thuê full - Thu nhập 12tr/tháng",
     },
     {
-      url: "/images/day-tro-goc-rong.jpg",
+      url: "images/day-tro-goc-rong.jpg",
       alt: "Toàn cảnh dãy trọ + sân vườn",
       caption: "Toàn cảnh dãy trọ và sân vườn rộng rãi",
     },
     {
-      url: "/images/san-ngay.jpg",
+      url: "images/san-ngay.jpg",
       alt: "Sân vườn ban ngày - Có thể mở rộng thêm phòng",
       caption: "Sân vườn rộng - Có thể mở rộng thêm phòng trọ hoặc làm hồ cá",
     },
     {
-      url: "/images/san-dem.jpg",
+      url: "images/san-dem.jpg",
       alt: "Sân + nhà chính + dãy trọ ban đêm",
       caption: "Không gian sống buổi tối - Sân rộng, ô tô vào tận nơi",
     },
     {
-      url: "/images/anhh9.jpg",
+      url: "images/anhh9.jpg",
       alt: "Phòng trọ - nội thất, cửa sổ, quạt, sàn gạch hoa",
       caption: "Phòng trọ thoáng mát - Khách thuê ổn định lâu dài",
     },
     {
-      url: "/images/anhh8.jpg",
+      url: "images/anhh8.jpg",
       alt: "Giường tầng kim loại trong phòng trọ",
       caption: "Giường tầng sẵn có - Khách vào ở ngay",
     },
     {
-      url: "/images/anhh11.jpg",
+      url: "images/anhh11.jpg",
       alt: "Hành lang dãy trọ - Cửa gỗ, mái che",
       caption: "Hành lang dãy trọ sạch sẽ, có mái che",
     },
     {
-      url: "/images/phong-tro-noi-that.jpg",
+      url: "images/phong-tro-noi-that.jpg",
       alt: "Sổ đỏ - Sơ đồ thửa đất tỷ lệ 1/500",
       caption: "Sổ hồng chính chủ - Sơ đồ thửa đất 204/205",
     },
     {
-      url: "/images/anhh12.jpg",
+      url: "images/anhh12.jpg",
       alt: "Sổ đỏ bản to - Tiếp giáp Đ. Điện Biên Phủ",
       caption: "Sổ hồng chi tiết - Tiếp giáp đường Điện Biên Phủ",
     },

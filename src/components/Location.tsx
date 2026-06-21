@@ -155,10 +155,10 @@ export default function Location() {
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[
-              { src: "/images/day-tro-mat-truoc.jpg", label: "Đầu kiệt 293 — Đ. Điện Biên Phủ", sub: "View từ Google Street View" },
-              { src: "/images/san-ngay.jpg", label: "Đi vào hẻm 2.3m", sub: "Ô tô VF3-VF5 vào tận sân" },
-              { src: "/images/day-tro-goc-rong.jpg", label: "Đến lô đất số 2/13/293", sub: "279m² — nhà + 5 phòng trọ" },
-              { src: "/images/san-dem.jpg", label: "Sân vườn rộng rãi", sub: "Thoáng mát, có thể mở rộng" },
+              { src: "images/day-tro-mat-truoc.jpg", label: "Đầu kiệt 293 — Đ. Điện Biên Phủ", sub: "View từ Google Street View" },
+              { src: "images/san-ngay.jpg", label: "Đi vào hẻm 2.3m", sub: "Ô tô VF3-VF5 vào tận sân" },
+              { src: "images/day-tro-goc-rong.jpg", label: "Đến lô đất số 2/13/293", sub: "279m² — nhà + 5 phòng trọ" },
+              { src: "images/san-dem.jpg", label: "Sân vườn rộng rãi", sub: "Thoáng mát, có thể mở rộng" },
             ].map((item, i) => (
               <div key={i} className="sv-photo opacity-0 group relative rounded-xl overflow-hidden aspect-[4/3] bg-zinc-800 border border-zinc-700/30">
                 <img src={item.src} alt={item.label} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
