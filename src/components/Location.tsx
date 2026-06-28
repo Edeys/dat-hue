@@ -17,29 +17,39 @@ export default function Location() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      ScrollTrigger.create({ trigger: headlineRef.current, start: "top 85%", onEnter: () => {
-        gsap.fromTo(headlineRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" })
-      }})
+      const mm = gsap.matchMedia()
+      mm.add("(min-width: 768px)", () => {
+        ScrollTrigger.create({ trigger: headlineRef.current, start: "top 90%", onEnter: () => {
+          gsap.fromTo(headlineRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" })
+        }})
 
-      const routeItems = routeRef.current?.querySelectorAll(".route-step")
-      if (routeItems) {
-        gsap.fromTo(routeItems, { opacity: 0, x: -20 }, { opacity: 1, x: 0, stagger: 0.15, duration: 0.5, ease: "power2.out", scrollTrigger: { trigger: routeRef.current, start: "top 80%" } })
-      }
+        const routeItems = routeRef.current?.querySelectorAll(".route-step")
+        if (routeItems) {
+          gsap.fromTo(routeItems, { opacity: 0, x: -20 }, { opacity: 1, x: 0, stagger: 0.1, duration: 0.4, ease: "power2.out", scrollTrigger: { trigger: routeRef.current, start: "top 90%" } })
+        }
 
-      const amenityItems = gridRef.current?.querySelectorAll(".amenity-item")
-      if (amenityItems) {
-        gsap.fromTo(amenityItems, { opacity: 0, y: 30 }, { opacity: 1, y: 0, stagger: 0.08, duration: 0.5, ease: "power2.out", scrollTrigger: { trigger: gridRef.current, start: "top 80%" } })
-      }
+        const amenityItems = gridRef.current?.querySelectorAll(".amenity-item")
+        if (amenityItems) {
+          gsap.fromTo(amenityItems, { opacity: 0, y: 30 }, { opacity: 1, y: 0, stagger: 0.05, duration: 0.3, ease: "power2.out", scrollTrigger: { trigger: gridRef.current, start: "top 90%" } })
+        }
 
-      const roadItems = roadsRef.current?.querySelectorAll(".road-item")
-      if (roadItems) {
-        gsap.fromTo(roadItems, { opacity: 0, x: -20 }, { opacity: 1, x: 0, stagger: 0.1, duration: 0.5, ease: "power2.out", scrollTrigger: { trigger: roadsRef.current, start: "top 85%" } })
-      }
+        const roadItems = roadsRef.current?.querySelectorAll(".road-item")
+        if (roadItems) {
+          gsap.fromTo(roadItems, { opacity: 0, x: -20 }, { opacity: 1, x: 0, stagger: 0.08, duration: 0.4, ease: "power2.out", scrollTrigger: { trigger: roadsRef.current, start: "top 90%" } })
+        }
 
-      const svItems = streetViewRef.current?.querySelectorAll(".sv-photo")
-      if (svItems) {
-        gsap.fromTo(svItems, { opacity: 0, y: 30 }, { opacity: 1, y: 0, stagger: 0.2, duration: 0.6, ease: "power2.out", scrollTrigger: { trigger: streetViewRef.current, start: "top 80%" } })
-      }
+        const svItems = streetViewRef.current?.querySelectorAll(".sv-photo")
+        if (svItems) {
+          gsap.fromTo(svItems, { opacity: 0, y: 30 }, { opacity: 1, y: 0, stagger: 0.1, duration: 0.4, ease: "power2.out", scrollTrigger: { trigger: streetViewRef.current, start: "top 90%" } })
+        }
+      })
+      mm.add("(max-width: 767px)", () => {
+        gsap.set(headlineRef.current, { opacity: 1 })
+        routeRef.current?.querySelectorAll(".route-step").forEach((el) => gsap.set(el, { opacity: 1 }))
+        gridRef.current?.querySelectorAll(".amenity-item").forEach((el) => gsap.set(el, { opacity: 1 }))
+        roadsRef.current?.querySelectorAll(".road-item").forEach((el) => gsap.set(el, { opacity: 1 }))
+        streetViewRef.current?.querySelectorAll(".sv-photo").forEach((el) => gsap.set(el, { opacity: 1 }))
+      })
     }, sectionRef)
 
     return () => ctx.revert()

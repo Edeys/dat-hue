@@ -14,12 +14,18 @@ export default function FAQ() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      ScrollTrigger.create({
-        trigger: headlineRef.current,
-        start: "top 85%",
-        onEnter: () => {
-          gsap.fromTo(headlineRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" })
-        },
+      const mm = gsap.matchMedia()
+      mm.add("(min-width: 768px)", () => {
+        ScrollTrigger.create({
+          trigger: headlineRef.current,
+          start: "top 90%",
+          onEnter: () => {
+            gsap.fromTo(headlineRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" })
+          },
+        })
+      })
+      mm.add("(max-width: 767px)", () => {
+        gsap.set(headlineRef.current, { opacity: 1 })
       })
     }, sectionRef)
 

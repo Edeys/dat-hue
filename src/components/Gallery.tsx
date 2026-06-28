@@ -15,22 +15,29 @@ export default function Gallery() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      ScrollTrigger.create({
-        trigger: headlineRef.current,
-        start: "top 85%",
-        onEnter: () => {
-          gsap.fromTo(headlineRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" })
-        },
-      })
+      const mm = gsap.matchMedia()
+      mm.add("(min-width: 768px)", () => {
+        ScrollTrigger.create({
+          trigger: headlineRef.current,
+          start: "top 90%",
+          onEnter: () => {
+            gsap.fromTo(headlineRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" })
+          },
+        })
 
-      const items = gridRef.current?.querySelectorAll(".gallery-item")
-      if (items) {
-        gsap.fromTo(
-          items,
-          { opacity: 0, y: 40, scale: 0.95 },
-          { opacity: 1, y: 0, scale: 1, duration: 0.6, stagger: 0.15, ease: "power2.out", scrollTrigger: { trigger: gridRef.current, start: "top 80%" } }
-        )
-      }
+        const items = gridRef.current?.querySelectorAll(".gallery-item")
+        if (items) {
+          gsap.fromTo(
+            items,
+            { opacity: 0, y: 40, scale: 0.95 },
+            { opacity: 1, y: 0, scale: 1, duration: 0.4, stagger: 0.1, ease: "power2.out", scrollTrigger: { trigger: gridRef.current, start: "top 90%" } }
+          )
+        }
+      })
+      mm.add("(max-width: 767px)", () => {
+        gsap.set(headlineRef.current, { opacity: 1 })
+        gridRef.current?.querySelectorAll(".gallery-item").forEach((el) => gsap.set(el, { opacity: 1 }))
+      })
     }, sectionRef)
 
     return () => ctx.revert()

@@ -15,18 +15,26 @@ export default function Trust() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const stItems = storyRef.current?.querySelectorAll(".story-item")
-      if (stItems) {
-        gsap.fromTo(stItems, { opacity: 0, x: -20 }, { opacity: 1, x: 0, stagger: 0.15, duration: 0.6, ease: "power2.out", scrollTrigger: { trigger: storyRef.current, start: "top 80%" } })
-      }
-      const crItems = credRef.current?.querySelectorAll(".cred-item")
-      if (crItems) {
-        gsap.fromTo(crItems, { opacity: 0, y: 30 }, { opacity: 1, y: 0, stagger: 0.1, duration: 0.6, ease: "power2.out", scrollTrigger: { trigger: credRef.current, start: "top 80%" } })
-      }
-      const invItems = scarcityRef.current?.querySelectorAll(".inv-item")
-      if (invItems) {
-        gsap.fromTo(invItems, { opacity: 0, y: 30 }, { opacity: 1, y: 0, stagger: 0.15, duration: 0.5, ease: "power2.out", scrollTrigger: { trigger: scarcityRef.current, start: "top 80%" } })
-      }
+      const mm = gsap.matchMedia()
+      mm.add("(min-width: 768px)", () => {
+        const stItems = storyRef.current?.querySelectorAll(".story-item")
+        if (stItems) {
+          gsap.fromTo(stItems, { opacity: 0, x: -20 }, { opacity: 1, x: 0, stagger: 0.1, duration: 0.4, ease: "power2.out", scrollTrigger: { trigger: storyRef.current, start: "top 90%" } })
+        }
+        const crItems = credRef.current?.querySelectorAll(".cred-item")
+        if (crItems) {
+          gsap.fromTo(crItems, { opacity: 0, y: 30 }, { opacity: 1, y: 0, stagger: 0.08, duration: 0.4, ease: "power2.out", scrollTrigger: { trigger: credRef.current, start: "top 90%" } })
+        }
+        const invItems = scarcityRef.current?.querySelectorAll(".inv-item")
+        if (invItems) {
+          gsap.fromTo(invItems, { opacity: 0, y: 30 }, { opacity: 1, y: 0, stagger: 0.1, duration: 0.35, ease: "power2.out", scrollTrigger: { trigger: scarcityRef.current, start: "top 90%" } })
+        }
+      })
+      mm.add("(max-width: 767px)", () => {
+        storyRef.current?.querySelectorAll(".story-item").forEach((el) => gsap.set(el, { opacity: 1 }))
+        credRef.current?.querySelectorAll(".cred-item").forEach((el) => gsap.set(el, { opacity: 1 }))
+        scarcityRef.current?.querySelectorAll(".inv-item").forEach((el) => gsap.set(el, { opacity: 1 }))
+      })
     }, sectionRef)
 
     return () => ctx.revert()

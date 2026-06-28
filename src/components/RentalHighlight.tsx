@@ -13,10 +13,16 @@ export default function RentalHighlight() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const items = itemsRef.current?.querySelectorAll(".rh-item")
-      if (items) {
-        gsap.fromTo(items, { opacity: 0, y: 30 }, { opacity: 1, y: 0, stagger: 0.12, duration: 0.5, ease: "power2.out", scrollTrigger: { trigger: itemsRef.current, start: "top 80%" } })
-      }
+      const mm = gsap.matchMedia()
+      mm.add("(min-width: 768px)", () => {
+        const items = itemsRef.current?.querySelectorAll(".rh-item")
+        if (items) {
+          gsap.fromTo(items, { opacity: 0, y: 30 }, { opacity: 1, y: 0, stagger: 0.08, duration: 0.4, ease: "power2.out", scrollTrigger: { trigger: itemsRef.current, start: "top 90%" } })
+        }
+      })
+      mm.add("(max-width: 767px)", () => {
+        itemsRef.current?.querySelectorAll(".rh-item").forEach((el) => gsap.set(el, { opacity: 1 }))
+      })
     }, sectionRef)
 
     return () => ctx.revert()

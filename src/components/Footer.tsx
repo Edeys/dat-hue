@@ -18,7 +18,7 @@ export default function Footer() {
             <h3 className="text-white font-bold text-lg mb-4">🔗 Liên kết nhanh</h3>
             <ul className="space-y-2 text-sm">
               <li><a href="#gallery" className="text-zinc-400 hover:text-amber-400 transition-colors">Hình ảnh thực tế</a></li>
-              <li><a href="#calculator" className="text-zinc-400 hover:text-amber-400 transition-colors">Tính lợi nhuận</a></li>
+              <li><a href="#trust" className="text-zinc-400 hover:text-amber-400 transition-colors">So sánh đầu tư</a></li>
               <li><a href="#location" className="text-zinc-400 hover:text-amber-400 transition-colors">Vị trí & tiện ích</a></li>
               <li><a href="#faq" className="text-zinc-400 hover:text-amber-400 transition-colors">Câu hỏi thường gặp</a></li>
               <li><a href="#form" className="text-zinc-400 hover:text-amber-400 transition-colors">Đăng ký tư vấn</a></li>

@@ -11,28 +11,54 @@ export default function LeadForm() {
   const [step, setStep] = useState(1)
   const [formData, setFormData] = useState({ name: "", phone: "", need: "investor", note: "" })
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
   const headlineRef = useRef<HTMLHeadingElement>(null)
   const formRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      ScrollTrigger.create({
-        trigger: headlineRef.current,
-        start: "top 85%",
-        onEnter: () => {
-          gsap.fromTo(headlineRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" })
-        },
+      const mm = gsap.matchMedia()
+      mm.add("(min-width: 768px)", () => {
+        ScrollTrigger.create({
+          trigger: headlineRef.current,
+          start: "top 90%",
+          onEnter: () => {
+            gsap.fromTo(headlineRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" })
+          },
+        })
+        gsap.fromTo(formRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", scrollTrigger: { trigger: formRef.current, start: "top 90%" } })
       })
-      gsap.fromTo(formRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", scrollTrigger: { trigger: formRef.current, start: "top 85%" } })
+      mm.add("(max-width: 767px)", () => {
+        gsap.set(headlineRef.current, { opacity: 1 })
+        gsap.set(formRef.current, { opacity: 1 })
+      })
     }, sectionRef)
 
     return () => ctx.revert()
   }, [])
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
+    setSubmitting(true)
+
+    try {
+      const res = await fetch("https://dattruongan.com/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+      if (!res.ok) throw new Error("API error")
+      setSubmitted(true)
+      window.gtag?.("event", "conversion", {
+        send_to: "AW-XXXXXXXXX/XXXXXXXXXXX",
+      })
+      window.fbq?.("track", "Lead")
+    } catch {
+      alert("Gửi thất bại. Vui lòng gọi trực tiếp: " + siteConfig.phone)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -104,9 +130,9 @@ export default function LeadForm() {
                       className="flex-1 bg-zinc-800 hover:bg-zinc-700 text-white font-medium py-3.5 rounded-xl transition-colors">
                       Quay lại
                     </button>
-                    <button type="submit"
-                      className="flex-[2] bg-amber-500 hover:bg-amber-400 text-zinc-900 font-semibold py-3.5 rounded-xl transition-colors text-lg">
-                      {leadFormContent.cta}
+                    <button type="submit" disabled={submitting}
+                      className="flex-[2] bg-amber-500 hover:bg-amber-400 text-zinc-900 font-semibold py-3.5 rounded-xl transition-colors text-lg disabled:opacity-50 disabled:cursor-not-allowed">
+                      {submitting ? "Đang gửi..." : leadFormContent.cta}
                     </button>
                   </div>
                 </div>
