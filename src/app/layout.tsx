@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import "./globals.css"
 
-const SITE_URL = "https://dattruongan.com"
+const SITE_URL = "https://edeys.github.io/dat-hue"
 const GA_MEASUREMENT_ID = "G-XXXXXXXXXX"
 const META_PIXEL_ID = "000000000000000"
 const GOOGLE_ADS_ID = "AW-XXXXXXXXX"

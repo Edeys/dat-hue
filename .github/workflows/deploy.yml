@@ -22,11 +22,11 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - run: npm install
-      - run: npm run build
       - uses: actions/configure-pages@v4
         with:
           static_site_generator: next
+      - run: npm install
+      - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./out

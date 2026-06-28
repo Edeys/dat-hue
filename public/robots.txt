@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dattruongan.com/sitemap.xml
+Sitemap: https://edeys.github.io/dat-hue/sitemap.xml
